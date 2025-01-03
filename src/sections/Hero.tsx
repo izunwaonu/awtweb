@@ -8,8 +8,8 @@ export const Hero = () => {
     <section className="pt-8 pb-20 md:p-5 md:pb-10 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] overflow-x-clip">
       <div className="container">
         <div className="md:flex items-center">
-          <div className="md: w-[478px]">
-              <div className="text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight">Sefora: Now Available!</div>
+          <div className="md: w-[478px]"> 
+              <div className="text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight">Sefora: Now Available</div>
               <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#48CAE4] text-transparent bg-clip-text mt-6">Safety, Connection, Empowerment</h1>
               <p className="text-xl text-[#010D3E] tracking-tight mt-6">
               Celebrate Safora App, a safe space for family security, 
@@ -17,7 +17,7 @@ export const Hero = () => {
               Stay connected, protected, and guided—all in one app.
               </p>
               <div className="flex gap-1 items-center mt-[30px]">
-              <button className="btn btn-primary" > Get Started for free</button>
+              <button className="btn btn-primary" > Get Started</button>
               <button className="btn btn-text gap-1">
                 <span>Learn more </span>
                 <ArrowIcon className="w-5 h-5" />
