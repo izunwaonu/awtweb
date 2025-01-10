@@ -2,14 +2,14 @@ import ArrowIcon from "@/assets/arrow-right.svg";
 import Image from "next/image";
 import cogImage from "@/assets/cog.png";
 import cogMain from "@/assets/cogmain.png";
-import noodleImage from "@/assets/noodle.png";
+
 export const Hero = () => {
   return (
     <section className="pr-5 pt-8 pb-20 md:p-5 md:pb-10 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] overflow-x-clip">
       <div className="container">
         <div className="md:flex items-center">
           <div className="w-[320px] md:w-[486px]"> 
-              <div className="text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight">Sefora: Now Available</div>
+              <div className="tag">Sefora: Now Available</div>
               <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#48CAE4] text-transparent bg-clip-text mt-6">Safety, Connection, Empowerment</h1>
               <p className="text-xl sm:text-sm md:text-sm text-[#010D3E] tracking-tight mt-6">
               Celebrate Safora App, a safe space for family security, 
