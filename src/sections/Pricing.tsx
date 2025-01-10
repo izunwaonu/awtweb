@@ -59,12 +59,12 @@ export const Pricing = () => {
       <div className="container">
         <h2 className="section-title">Pricing</h2>
         <p className="section-description mt-5">
-          Our pricing plans are flexible and designed to meet the needs of individuals and...
+          Our pricing plans are flexible and designed to meet the needs of individuals and teams.
         </p>
           <div className="flex flex-col gap-6 items-center mt-10">
            {
             pricingTiers.map(({title, monthlyPrice, buttonText, popular, inverse, features})=>(
-              <div className={twMerge("p-10 border border-[#F1F1F1] rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full ", inverse === true && 'border-black bg-black text-white/60')}>
+              <div key={title} className={twMerge("p-10 border border-[#F1F1F1] rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full ", inverse === true && 'border-black bg-black text-white/60')}>
                 <div className="flex justify-between">
                   <h3 className={twMerge("text-lg font-bold text-black/50", inverse === true && "text-white/60")} key={title}>{title}</h3>
                   {
