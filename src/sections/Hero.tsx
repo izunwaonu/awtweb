@@ -1,7 +1,9 @@
+"use client"
 import ArrowIcon from "@/assets/arrow-right.svg";
 import Image from "next/image";
 import cogImage from "@/assets/cog.png";
 import cogMain from "@/assets/cogmain.png";
+import {motion} from "framer-motion";
 
 export const Hero = () => {
   return (
@@ -26,7 +28,17 @@ export const Hero = () => {
           </div>
       
         <div className="mt-20 md:mt-0 md:ml-10 md:h-[648px] md:flex-1 relative">
-          <Image src={cogMain} alt="cog" className=" opacity-100 md:absolute md:mt-[70px] md:width-auto md:max-w-none md:-left-6 lg:left-0" />
+          <motion.img src={cogMain.src} alt="cog" className=" opacity-100 md:absolute md:mt-[70px] md:width-auto md:max-w-none md:-left-6 lg:left-0" 
+          animate={{
+            translateY:[-30, 30]
+          }}
+          transition={{
+            repeat: Infinity,
+            repeatType: 'mirror',
+            duration: 3,
+            ease: "easeInOut"
+          }}
+          />
           <Image src={cogImage} alt="Img" width={220} height={220} className="hidden md:block top-16 -left-32 md:absolute"/>
           <Image src={cogImage} alt="Img" width={220} className="lg:block absolute top-[524px] left-[448px] rotate-[30deg]"/>
         </div>
