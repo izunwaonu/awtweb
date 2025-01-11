@@ -70,22 +70,10 @@ const firstColumn = testimonials.slice(0, 3);
 const secondColumn = testimonials.slice(3, 6);
 const thirdColumn = testimonials.slice(6, 9);
 
-export const Testimonials = () => {
-  return (
-    <section className="bg-white">
-      <div className="container">
-        <div className="flex justify-center">
-          <div className="tag">Testimonials</div>
-        </div>
-        <h2 className="section-title mt-5">What Our Clients Say</h2>
-        <p className="section-description mt-5">
-        We are proud to have helped businesses 
-        achieve their goals. Here’s what our clients have to say
-        </p>
-        <div className="flex justify-center gap-6">
-        <div className="flex flex-col gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] ">
+const TestimonialsColumn = (props:{testimonials: typeof testimonials})=>(
+  <div className="flex flex-col gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] ">
         {
-          firstColumn.map(({text, imageSrc, name, username} )=>(
+          props.testimonials.map(({text, imageSrc, name, username} )=>(
             <div key={text} className="card">
               <div>{text}</div>
               <div className="flex items-center gap-2 mt-5">
@@ -100,6 +88,24 @@ export const Testimonials = () => {
           ))
         }
         </div>
+)
+
+export const Testimonials = () => {
+  return (
+    <section className="bg-white">
+      <div className="container">
+        <div className="flex justify-center">
+          <div className="tag">Testimonials</div>
+        </div>
+        <h2 className="section-title mt-5">What Our Clients Say</h2>
+        <p className="section-description mt-5">
+        We are proud to have helped businesses 
+        achieve their goals. Here’s what our clients have to say
+        </p>
+        <div className="flex justify-center gap-6">
+          <TestimonialsColumn testimonials={firstColumn}/>        
+          <TestimonialsColumn testimonials={secondColumn}/>        
+          <TestimonialsColumn testimonials={thirdColumn}/>        
         </div>
 
       </div>
