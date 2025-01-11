@@ -18,7 +18,10 @@ export const Header = () => {
     <div className="py-5">
       <div className="container">
         <div className="flex justify-between items-center">
+        <div className="flex items-center justify-center gap-2">
         <Image src={Logo} alt="African Witch Tech Logo" height={40} width={40} />
+        <h2 className="text-center text-xl md:text-[35px] md:leading-[60px] font-bold tracking-tighter bg-gradient-to-b from-black to-green-900 text-transparent bg-clip-text">African Witch Tech</h2>
+        </div>
         <MenuIcon className="h-5 w-5 md:hidden" />
         <nav className="hidden md:flex gap-6 text-green-950 items-center">
           <a href="#" >About Us</a>
